@@ -11,3 +11,17 @@ nav.push('<a class="n1" href="join_us.html"><span>join us</span><b>加盟合作<
 document.getElementById('header').innerHTML=nav.join('');
 
 
+function arrow(){
+	if($(window).scrollTop()>300){
+		$('#arrow').show();
+	}else{
+		$('#arrow').hide();
+	}
+}
+arrow();
+$(window).scroll(function(){
+	arrow();
+});
+$('#arrow').click(function(){
+	$('html,body').animate({"scrollTop":0},300);
+});
