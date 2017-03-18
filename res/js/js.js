@@ -9,8 +9,6 @@ nav.push('<a class="n3" href="contact_us.html"><span>conatct us</span><b>联系�
 nav.push('<a class="n4" href="leave_message.html"><span>leave message</span><b>给我留言</b><i></i></a>');
 nav.push('<a class="n1" href="join_us.html"><span>join us</span><b>加盟合作</b></a><div id="music"></div></div>');
 document.getElementById('header').innerHTML=nav.join('');
-
-
 function arrow(){
 	if($(window).scrollTop()>300){
 		$('#arrow').show();
@@ -18,10 +16,12 @@ function arrow(){
 		$('#arrow').hide();
 	}
 }
-arrow();
-$(window).scroll(function(){
+try{
 	arrow();
-});
-$('#arrow').click(function(){
-	$('html,body').animate({"scrollTop":0},300);
-});
+	$(window).scroll(function(){
+		arrow();
+	});
+	$('#arrow').click(function(){
+		$('html,body').animate({"scrollTop":0},300);
+	});
+}catch(e){}
