@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Title</title>
-    <link rel="stylesheet" href="res/css/css.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>首页</title>
+<link rel="stylesheet" href="res/css/css.css"/>
+<style>
+html,body{position:relative;height:100%;}
+.swiper-container{width:100%;height:100%;}
+.swiper-slide{}
+</style>
 </head>
-<body class="M">
-<div id="header"></div>
-<div class="subtitle">
-    <h2>about us</h2>
-    <h2>关于我们</h2>
-</div>
-<div class="summary">
-    <p>BonnieBride婚礼策划机构是以杭州为中心，辐射浙江和上海等地区最具时尚创意风格的婚礼品牌。我们年轻、活力，独特的个性和对生活的不同理解创造了一段又一段美丽的记忆。</p>
-    <p>专业的品质和非凡的执行力是我们坚持的工作原则，工作的灵感来源于生活，生活的本质是让我们更快乐，快乐的工作是伯妮人的灵感源泉。</p>
-    <p>让每一场活动，每段记忆都与众不同，让我们的汗水和努力、快乐和坚韧精神展现伯妮人的精神。</p>
-</div>
+<body class="I">
+	<div id="header"></div>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="sw1">
+					<div class="img"><img src="res/image/i1i.png" alt=""></div>
+					<div class="desc"><img src="res/image/i1t.png" alt=""></div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="sw2">
+					<div class="img"><img src="res/image/i2i.png" alt=""></div>
+					<div class="desc"><img src="res/image/i2t.png" alt=""></div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="sw2">
+					<div class="img"><img src="res/image/i3i.png" alt=""></div>
+					<div class="desc"><img src="res/image/i3t.png" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
 <script src="res/js/js.js"></script>
+<script src="res/js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    direction: 'vertical'
+});
+</script>
 </body>
 </html>
