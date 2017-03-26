@@ -204,11 +204,11 @@ button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-
 .I .sw2{width:1200px;position:absolute;left:50%;top:50%;margin-left:-600px;}
 .I .sw1{height:480px;margin-top:-155px;}
 .I .sw2{height:450px;margin-top:-150px;}
-.I .img{width:675px;float:left;}
-.I .desc{width:525px;float:left;height:450px;}
+.I .img{width:675px;float:left;position:relative;overflow:hidden;}
+.I .desc{width:525px;float:left;height:450px;position:relative;overflow:hidden;}
 .I .sw1 .img{height:480px;}
 .I .sw2 .img{height:450px;}
-
-
+.I .sw2 .img img{max-width:675px;max-height:450px;}
+.I .sw2 .desc img{max-width:525px;max-height:450px;}
 
 

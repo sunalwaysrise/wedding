@@ -7,42 +7,59 @@
 <link rel="stylesheet" href="res/css/css.css"/>
 <style>
 html,body{position:relative;height:100%;}
-.swiper-container{width:100%;height:100%;}
+.swiper-container0{width:100%;height:100%;}
 .swiper-slide{}
 </style>
 </head>
 <body class="I">
 	<div id="header"></div>
-	<div class="swiper-container">
+	<div class="swiper-container swiper-container0">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
-				<div class="sw1">
-					<div class="img"><img src="res/image/i1i.png" alt=""></div>
-					<div class="desc"><img src="res/image/i1t.png" alt=""></div>
+				<div class="sw2" id="sw2">
+					<div class="swiper-container img swiper-container1">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="res/image/i1i.png" alt=""/></div>
+							<div class="swiper-slide"><img src="res/image/i2i.png" alt=""/></div>
+							<div class="swiper-slide"><img src="res/image/i3i.png" alt=""/></div>
+						</div>
+					</div>
+					<div class="swiper-container desc swiper-container2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="res/image/i1t.png" alt=""/></div>
+							<div class="swiper-slide"><img src="res/image/i2t.png" alt=""/></div>
+							<div class="swiper-slide"><img src="res/image/i3t.png" alt=""/></div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="swiper-slide">
-				<div class="sw2">
-					<div class="img"><img src="res/image/i2i.png" alt=""></div>
-					<div class="desc"><img src="res/image/i2t.png" alt=""></div>
-				</div>
-			</div>
-			<div class="swiper-slide">
-				<div class="sw2">
-					<div class="img"><img src="res/image/i3i.png" alt=""></div>
-					<div class="desc"><img src="res/image/i3t.png" alt=""></div>
-				</div>
-			</div>
+			
 		</div>
-		<div class="swiper-pagination"></div>
 	</div>
 <script src="res/js/js.js"></script>
+<script src="//apps.bdimg.com/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="res/js/swiper.min.js"></script>
+<script src="res/js/jquery.mousewheel.js"></script>
 <script>
-var swiper = new Swiper('.swiper-container', {
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
-    direction: 'vertical'
+var swiper1 = new Swiper('.swiper-container1',{
+	spaceBetween: 150,
+	speed:800,
+	loop:true
+});
+var swiper2 = new Swiper('.swiper-container2',{
+	direction: 'vertical',
+	spaceBetween: 150,
+	speed:800,
+    loop: true
+});
+$('#sw2').on('mousewheel', function(event) {
+    if(event.deltaY>0){
+    	swiper1.slidePrev();
+		swiper2.slidePrev();
+    }else{
+		swiper1.slideNext();
+		swiper2.slideNext();
+    }
 });
 </script>
 </body>
